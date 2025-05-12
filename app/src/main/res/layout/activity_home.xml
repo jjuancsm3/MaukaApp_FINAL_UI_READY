@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Barra superior con logo y notificación -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logo_center"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/lmauka"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/notification_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="N"
+            android:layout_alignParentEnd="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="#25009688"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Cuerpo principal (por ahora vacío) -->
+    <TextView
+        android:id="@+id/textProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargando usuario..."
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="20dp" />
+
+    <!-- Menú inferior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#25009688"
+        app:menu="@menu/bottom_menu" />
+
+</LinearLayout>
